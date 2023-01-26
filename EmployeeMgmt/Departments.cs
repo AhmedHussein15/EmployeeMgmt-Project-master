@@ -20,11 +20,11 @@ namespace EmployeeMgmt
             ShowDepartments();
 
         }
+         
+        private void Departments_Load(object sender, EventArgs e) 
+        { 
 
-        private void Departments_Load(object sender, EventArgs e)
-        {
-
-        }
+        } 
         private void ShowDepartments() {
             string Query = "Select * from DepartmentTb1";
             DepList.DataSource = Con.GetData(Query);
