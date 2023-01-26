@@ -12,7 +12,7 @@ namespace EmployeeMgmt
     {
         private SqlConnection Con;
         private SqlCommand Cmd;
-        private DataTable dt;
+        private DataTable dt; 
         private SqlDataAdapter sda;
         private string ConStr;
 
@@ -26,7 +26,7 @@ namespace EmployeeMgmt
         } 
 
         public DataTable GetDataTable(string Query) { 
-            dt = new DataTable(); 
+            dt = new DataTable();  
             sda = new SqlDataAdapter(Query, ConStr);  
             sda.Fill(dt); 
             return dt; 
