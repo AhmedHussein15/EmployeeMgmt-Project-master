@@ -21,10 +21,10 @@ namespace EmployeeMgmt
             GetDepartment(); 
         } 
         private void ShowEmp()
-        {
-            string Query = "Select * from EmployeeTb1";
-            EmployeeList.DataSource = Con.GetData(Query);
-        }
+        { 
+            string Query = "Select * from EmployeeTb1"; 
+            EmployeeList.DataSource = Con.GetData(Query); 
+        } 
         private void GetDepartment() {
             string Query = "select * from DepartmentTb1";
             DepCb.DisplayMember = Con.GetData(Query).Columns("DepName").ToString();
