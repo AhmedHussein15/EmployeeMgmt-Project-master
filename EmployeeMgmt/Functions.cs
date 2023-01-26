@@ -32,7 +32,7 @@ namespace EmployeeMgmt
             return dt;
         }
 
-        public int SetData(string Query)
+        public int SetData(string Query) 
         {
             int cnt = 0;
             if (Con.State == ConnectionState.Closed) {
