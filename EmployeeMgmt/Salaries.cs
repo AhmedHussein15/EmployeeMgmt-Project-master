@@ -43,15 +43,15 @@ namespace EmployeeMgmt
 
             }
 
-            if (DaysTb.Text == "")
+            if (DaysTb.Text == "") 
             {
-                AmountTb.Text = "Rs " + (d * DSal);
-            }
-            else if (Convert.ToInt32(DaysTb.Text) > 31) {
-                MessageBox.Show("Days Can not Be Greater then 31");
-            }
-            else
-            {
+                AmountTb.Text = "Rs " + (d * DSal); 
+            } 
+            else if (Convert.ToInt32(DaysTb.Text) > 31) { 
+                MessageBox.Show("Days Can not Be Greater then 31"); 
+            } 
+            else  
+            { 
                 d = Convert.ToInt32(DaysTb.Text);
                 AmountTb.Text = "Rs " + (d * DSal);
             }
@@ -81,30 +81,30 @@ namespace EmployeeMgmt
         int d = 1;
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            try {
-                if (EmpCb.SelectedIndex == -1 || DaysTb.Text == "" || PeriodTb.Text == "")
-                {
-                    MessageBox.Show("Missing Data!!");
-                }
-                else {
-                    period = PeriodTb.Value.Date.Month.ToString() + "-" + PeriodTb.Value.Date.Year.ToString();
-                    int Amount = DSal * Convert.ToInt32(DaysTb.Text);
-                    int Days = Convert.ToInt32(DaysTb.Text);
+            try { 
+                if (EmpCb.SelectedIndex == -1 || DaysTb.Text == "" || PeriodTb.Text == "") 
+                { 
+                    MessageBox.Show("Missing Data!!"); 
+                } 
+                else { 
+                    period = PeriodTb.Value.Date.Month.ToString() + "-" + PeriodTb.Value.Date.Year.ToString(); 
+                    int Amount = DSal * Convert.ToInt32(DaysTb.Text); 
+                    int Days = Convert.ToInt32(DaysTb.Text); 
+                     
+                     
+                    string Query = "insert into SalaryTb1 values({0},{1},'{2}',{3},'{4}')"; 
+                    Query = string.Format(Query, EmpCb.SelectedValue.ToString , Days, period, Amount, DateTime.Today); 
+                    Con.SetData(Query); 
+                    ShowSalaries(); 
+                    MessageBox.Show("Salary Paid!!"); 
+                    DaysTb.Text = ""; 
                     
-
-                    string Query = "insert into SalaryTb1 values({0},{1},'{2}',{3},'{4}')";
-                    Query = string.Format(Query, EmpCb.SelectedValue.ToString , Days, period, Amount, DateTime.Today);
-                    Con.SetData(Query);
-                    ShowSalaries();
-                    MessageBox.Show("Salary Paid!!");
-                    DaysTb.Text = "";
-                    
-                }
+                } 
                 
-            }
-            catch(Exception Ex) {
-                MessageBox.Show(Ex.Message);
-            }
+            } 
+            catch(Exception Ex) { 
+                MessageBox.Show(Ex.Message); 
+            } 
             
 
         }
