@@ -27,7 +27,7 @@ namespace EmployeeMgmt
 
         public DataTable GetDataTable(string Query) {
             dt = new DataTable();
-            sda = new SqlDataAdapter(Query, ConStr);
+            sda = new SqlDataAdapter(Query, ConStr); 
             sda.Fill(dt);
             return dt;
         }
