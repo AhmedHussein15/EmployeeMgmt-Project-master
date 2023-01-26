@@ -12,12 +12,12 @@ namespace EmployeeMgmt
 {
     public partial class Departments : Form
     {
-        Functions Con;
+        Functions Con; 
         public Departments()
         {
             InitializeComponent();
-            Con = new Functions();
-            ShowDepartments();
+            Con = new Functions(); 
+            ShowDepartments(); 
 
         }
          
@@ -25,32 +25,32 @@ namespace EmployeeMgmt
         { 
 
         } 
-        private void ShowDepartments() {
-            string Query = "Select * from DepartmentTb1";
-            DepList.DataSource = Con.GetData(Query);
-        }
-        private void AddBtn_Click(object sender, EventArgs e)
+        private void ShowDepartments() { 
+            string Query = "Select * from DepartmentTb1"; 
+            DepList.DataSource = Con.GetData(Query); 
+        } 
+        private void AddBtn_Click(object sender, EventArgs e) 
         {
-            try {
-                if (DepNameTb.Text == "")
-                {
-                    MessageBox.Show("Missing Data!!!");
-                }
-                else {
-                    string Dep = DepNameTb.Text;
-                    string Query = "insert into DepartmentTb1 values('{0}')";
-                    Query = string.Format(Query,DepNameTb.Text);
-                    Con.SetData(Query);
-                    ShowDepartments();
-                    MessageBox.Show("Department Added!!");
-                    DepNameTb.Text = "";
+            try { 
+                if (DepNameTb.Text == "") 
+                { 
+                    MessageBox.Show("Missing Data!!!"); 
+                } 
+                else { 
+                    string Dep = DepNameTb.Text; 
+                    string Query = "insert into DepartmentTb1 values('{0}')"; 
+                    Query = string.Format(Query,DepNameTb.Text); 
+                    Con.SetData(Query); 
+                    ShowDepartments(); 
+                    MessageBox.Show("Department Added!!"); 
+                    DepNameTb.Text = ""; 
 
-                }
-            }
-            catch (Exception Ex)
-            {
-                MessageBox.Show(Ex.Message);
-            }
+                } 
+            } 
+            catch (Exception Ex) 
+            { 
+                MessageBox.Show(Ex.Message); 
+            } 
         }
         int key = 0; 
         private void DepList_CellContentClick(object sender, DataGridViewCellEventArgs e)   
