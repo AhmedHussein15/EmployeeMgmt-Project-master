@@ -52,8 +52,9 @@ namespace EmployeeMgmt
                 MessageBox.Show(Ex.Message);
             }
         }
-        int key = 0;
-        private void DepList_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+        int key = 0; 
+        private void DepList_CellContentClick(object sender, DataGridViewCellEventArgs e)   
+        {
             DepNameTb.Text = DepList.selectedRows[0].Cells[1].Value.ToString();
             if (DepNameTb.Text == "")
             {
