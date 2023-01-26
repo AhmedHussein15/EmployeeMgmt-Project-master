@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
-using System.Data;
+﻿using System; 
+using System.Collections.Generic; 
+using System.Linq; 
+using System.Text; 
+using System.Threading.Tasks; 
+using System.Data.SqlClient; 
+using System.Data; 
 
-namespace EmployeeMgmt
+namespace EmployeeMgmt 
 {
-    internal class Functions
+    internal class Functions 
     {
         private SqlConnection Con;
         private SqlCommand Cmd;
@@ -17,7 +17,7 @@ namespace EmployeeMgmt
         private string ConStr;
 
 
-        public Functions() {
+        public Functions()  {
             ConStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Ahmed\Documents\EmpDb.mdf;Integrated Security=True;Connect Timeout=30";
             Con = new SqlConnection(ConStr);
             Cmd = new SqlCommand();
