@@ -8,10 +8,10 @@ namespace EmployeeMgmt
         }
 
         private void label4_Click(object sender, EventArgs e)
-        {
-            UNameTb.Text = "";
-            PasswordTb.Text = "";
-        }
+        { 
+            UNameTb.Text = ""; 
+            PasswordTb.Text = ""; 
+        } 
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
