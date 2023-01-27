@@ -39,7 +39,7 @@ namespace EmployeeMgmt
                 else { 
                     string Dep = DepNameTb.Text; 
                     string Query = "insert into DepartmentTb1 values('{0}')"; 
-                    Query = string.Format(Query,DepNameTb.Text); 
+                    Query = string.Format(Query,DepNameTb.Text);  
                     Con.SetData(Query); 
                     ShowDepartments(); 
                     MessageBox.Show("Department Added!!"); 
@@ -52,17 +52,17 @@ namespace EmployeeMgmt
                 MessageBox.Show(Ex.Message); 
             } 
         }
-        int key = 0; 
-        private void DepList_CellContentClick(object sender, DataGridViewCellEventArgs e)   
+        int key = 0;  
+        private void DepList_CellContentClick(object sender, DataGridViewCellEventArgs e)    
         {
-            DepNameTb.Text = DepList.selectedRows[0].Cells[1].Value.ToString();
-            if (DepNameTb.Text == "")
+            DepNameTb.Text = DepList.selectedRows[0].Cells[1].Value.ToString(); 
+            if (DepNameTb.Text == "") 
             {
-                key = 0;
+                key = 0; 
             }
-            else {
-                key.Convert.ToInt32(DepList.selectedRows[0].Cells[1].Value.ToString());
-            }
+            else { 
+                key.Convert.ToInt32(DepList.selectedRows[0].Cells[1].Value.ToString()); 
+            } 
         }
 
         private void EditBtn_Click(object sender, EventArgs e)
