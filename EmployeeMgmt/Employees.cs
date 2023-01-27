@@ -61,8 +61,8 @@ namespace EmployeeMgmt
 
                 }
             }
-            catch (Exception Ex)
-            {
+            catch (Exception Ex) 
+            { 
                 MessageBox.Show(Ex.Message);
             }
         }
