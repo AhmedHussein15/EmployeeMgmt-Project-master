@@ -53,8 +53,8 @@ namespace EmployeeMgmt
                     Query = string.Format(Query, Name,Gender,Dep,DOB,JDate,Salary);
                     Con.SetData(Query);
                     ShowEmp();
-                    MessageBox.Show("Department Added!!");
-                    EmpNameTb.Text = "";
+                    MessageBox.Show("Department Added!!"); 
+                    EmpNameTb.Text = ""; 
                     DailySalTb.Text = "";
                     GenCb.SelectedIndex = -1; 
                     DepCb.SelectedIndex = -1; 
