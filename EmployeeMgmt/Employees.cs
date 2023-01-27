@@ -84,10 +84,10 @@ namespace EmployeeMgmt
                     Con.SetData(Query);
                     ShowEmp();
                     MessageBox.Show("Department Deleted!!");
-                    EmpNameTb.Text = "";
-                    DailySalTb.Text = "";
-                    GenCb.SelectedIndex = -1;
-                    DepCb.SelectedIndex = -1;
+                    EmpNameTb.Text = ""; 
+                    DailySalTb.Text = ""; 
+                    GenCb.SelectedIndex = -1; 
+                    DepCb.SelectedIndex = -1; 
 
                 }
             }
