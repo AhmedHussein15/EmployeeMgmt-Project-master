@@ -29,17 +29,17 @@ namespace EmployeeMgmt
 
         }
 
-        int DSal = 0; 
+        int DSal = 0;  
         string period = ""; 
-        private void GetSalary() 
-        {
-            string Query = "select EmpSal from EmployeeTb1 where EmpId={0}"; 
-            Query = string.Format(Query,EmpCb.SelectedValue.ToString()); 
+        private void GetSalary()  
+        { 
+            string Query = "select EmpSal from EmployeeTb1 where EmpId={0}";  
+            Query = string.Format(Query,EmpCb.SelectedValue.ToString());  
             
             foreach(DataRow dr in Con.GetDate(Query).Rows) 
             { 
 
-                DSal = Convert.ToInt32(dr["EmpSal"].ToString()); 
+                DSal = Convert.ToInt32(dr["EmpSal"].ToString());  
 
             } 
 
@@ -48,7 +48,7 @@ namespace EmployeeMgmt
                 AmountTb.Text = "Rs " + (d * DSal); 
             } 
             else if (Convert.ToInt32(DaysTb.Text) > 31) { 
-                MessageBox.Show("Days Can not Be Greater then 31");  
+                MessageBox.Show("Days Can not Be Greater then 31");   
             } 
             else  
             { 
