@@ -21,9 +21,9 @@ namespace EmployeeMgmt
             }
             else if (UNameTb.Text == "Admin" && PasswordTb.Text == "password")
             {
-                Employees Obj = new Employees();
-                Obj.Show();
-                this.Hide();
+                Employees Obj = new Employees(); 
+                Obj.Show(); 
+                this.Hide(); 
             }
             else {
                 MessageBox.Show("Wrong UserName Or Password!!");
