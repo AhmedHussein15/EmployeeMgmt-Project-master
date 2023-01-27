@@ -67,23 +67,23 @@ namespace EmployeeMgmt
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            try
+            try 
             {
-                if (DepNameTb.Text == "")
+                if (DepNameTb.Text == "") 
                 {
-                    MessageBox.Show("Missing Data!!!");
+                    MessageBox.Show("Missing Data!!!"); 
                 }
-                else
+                else 
                 {
-                    string Dep = DepNameTb.Text;
-                    string Query = "Update into DepartmentTb1 set DepName= ('{0}') where DepId = {1} ";
-                    Query = string.Format(Query, DepNameTb.Text,key);
-                    Con.SetData(Query);
-                    ShowDepartments();
-                    MessageBox.Show("Department Updated!!");
-                    DepNameTb.Text = "";
+                    string Dep = DepNameTb.Text; 
+                    string Query = "Update into DepartmentTb1 set DepName= ('{0}') where DepId = {1} "; 
+                    Query = string.Format(Query, DepNameTb.Text,key); 
+                    Con.SetData(Query); 
+                    ShowDepartments(); 
+                    MessageBox.Show("Department Updated!!"); 
+                    DepNameTb.Text = ""; 
 
-                }
+                } 
             }
             catch (Exception Ex)
             {
