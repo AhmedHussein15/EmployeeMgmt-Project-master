@@ -56,8 +56,8 @@ namespace EmployeeMgmt
                     MessageBox.Show("Department Added!!");
                     EmpNameTb.Text = "";
                     DailySalTb.Text = "";
-                    GenCb.SelectedIndex = -1;
-                    DepCb.SelectedIndex = -1;
+                    GenCb.SelectedIndex = -1; 
+                    DepCb.SelectedIndex = -1; 
 
                 }
             }
